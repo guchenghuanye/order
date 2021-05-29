@@ -7,7 +7,6 @@
     <%--<script type="text/javascript">--%>
         <%--try{ace.settings.check('navbar' , 'fixed')}catch(e){}--%>
     <%--</script>--%>
-
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
             <a class="navbar-brand">
@@ -23,7 +22,7 @@
 
                 <li class="light-blue">
                     <a data-toggle="dropdown">
-                        <img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+                        <img class="nav-user-photo" src="<%=basePath%>/assets/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
                             <small>欢迎光临,</small>
                             小同学

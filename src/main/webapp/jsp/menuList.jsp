@@ -118,10 +118,6 @@
 									</select>
 									<input type = "submit", value = "提交查询" class="btn btn-xs"/>
 									&nbsp;|&nbsp;
-									<%--<input type = "button" value = "添加菜品" onclick="window.location.href='/addMenu'" class="btn btn-xs">--%>
-									<%--&nbsp;|&nbsp;--%>
-									<%--<input type = "button" value = "管理分类" onclick="window.location.href='/showCategories'" class="btn btn-xs">--%>
-									<%--&nbsp;|&nbsp;--%>
 									<input type = "checkbox" name = "useCookie"
 											<%
 												if(currentUseCookie != null && currentUseCookie.equalsIgnoreCase("on")){
@@ -155,8 +151,8 @@
 								</td>
 								<td align="center">${menu.price}</td>
 								<td>
-									<input type = "button" value = "删除" onclick="javascript:if(confirm('确认删除${menu.mname}'))window.location.href='/delete/${menu.mid}'">
-									<input type = "button" value = "更新" onclick="window.location.href='/editMenu/${menu.mid}'">
+									<input type = "button" value = "删除" onclick="javascript:if(confirm('确认删除${menu.mname}'))window.location.href='<%=path%>/delete/${menu.mid}'">
+									<input type = "button" value = "更新" onclick="window.location.href='<%=path%>/editMenu/${menu.mid}'">
 								</td>
 							</tr>
 						</c:forEach>
@@ -187,42 +183,42 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+			window.jQuery || document.write("<script src='<%=basePath%>/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+ window.jQuery || document.write("<script src='<%=basePath%>/assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
 </script>
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+			if("ontouchend" in document) document.write("<script src='<%=basePath%>/assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
 		</script>
-		<script src="../assets/js/bootstrap.min.js"></script>
-		<script src="../assets/js/typeahead-bs2.min.js"></script>
+		<script src="<%=basePath%>/assets/js/bootstrap.min.js"></script>
+		<script src="<%=basePath%>/assets/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!--[if lte IE 8]>
-		  <script src="../assets/js/excanvas.min.js"></script>
+		  <script src="<%=basePath%>/assets/js/excanvas.min.js"></script>
 		<![endif]-->
 
-		<script src="../assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../assets/js/jquery.slimscroll.min.js"></script>
-		<script src="../assets/js/jquery.easy-pie-chart.min.js"></script>
-		<script src="../assets/js/jquery.sparkline.min.js"></script>
-		<script src="../assets/js/flot/jquery.flot.min.js"></script>
-		<script src="../assets/js/flot/jquery.flot.pie.min.js"></script>
-		<script src="../assets/js/flot/jquery.flot.resize.min.js"></script>
+		<script src="<%=basePath%>/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<%=basePath%>/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="<%=basePath%>/assets/js/jquery.slimscroll.min.js"></script>
+		<script src="<%=basePath%>/assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="<%=basePath%>/assets/js/jquery.sparkline.min.js"></script>
+		<script src="<%=basePath%>/assets/js/flot/jquery.flot.min.js"></script>
+		<script src="<%=basePath%>/assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="<%=basePath%>/assets/js/flot/jquery.flot.resize.min.js"></script>
 
 		<!-- ace scripts -->
 
-		<script src="../assets/js/ace-elements.min.js"></script>
-		<script src="../assets/js/ace.min.js"></script>
+		<script src="<%=basePath%>/assets/js/ace-elements.min.js"></script>
+		<script src="<%=basePath%>/assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 

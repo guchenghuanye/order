@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%
+	String path = request.getContextPath();
+%>
 <html>
 <head>
 	<title>添加菜品分类</title>
@@ -12,7 +14,7 @@
 
 <body>
 	<h2>添加菜品分类</h2>
-	<form action="/saveCategory" method = "post">
+	<form action="<%=path%>/saveCategory" method = "post">
 		<table border="1" cellspacing="0" cellpadding="5">
 			<tr>
 				<th>菜品分类名称</th>
@@ -27,7 +29,7 @@
 		<br>
 		<input type = "submit" value = "添加"/>
 		&nbsp;
-		<input type = "button" value = "取消" onclick="window.location.href='/showCategories'"/>
+		<input type = "button" value = "取消" onclick="window.location.href='<%=path%>/showCategories'"/>
 	</form>
 
 </body>

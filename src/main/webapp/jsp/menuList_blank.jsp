@@ -22,6 +22,7 @@
 			System.out.println("ckCid 的值是" + ckCid.getName() + " = " + ckCid.getValue());
 		}
 	}
+	String path = request.getContextPath();
 
 	//如果ckUseCookie = on 并且当前的 currentCid 为空 则尝试提交相应的请求
 	if(ckUseCookie != null && ckUseCookie.getValue().equalsIgnoreCase("on") && currentCid == null){
@@ -66,9 +67,9 @@
 		</select>
 		<input type = "submit", value = "提交查询"/>
 		&nbsp;|&nbsp;
-		<input type = "button" value = "添加菜品" onclick="window.location.href='/addMenu'">
+		<input type = "button" value = "添加菜品" onclick="window.location.href='<%=path%>/addMenu'">
 		&nbsp;|&nbsp;
-		<input type = "button" value = "管理分类" onclick="window.location.href='/showCategories'">
+		<input type = "button" value = "管理分类" onclick="window.location.href='<%=path%>/showCategories'">
 		&nbsp;|&nbsp;
 		<input type = "checkbox" name = "useCookie"
 		<%
@@ -101,8 +102,8 @@
 				</td>
 				<td align="center">${menu.price}</td>
 				<td>
-					<input type = "button" value = "删除" onclick="javascript:if(confirm('确认删除${menu.mname}'))window.location.href='/delete/${menu.mid}'">
-					<input type = "button" value = "更新" onclick="window.location.href='/editMenu/${menu.mid}'">
+					<input type = "button" value = "删除" onclick="javascript:if(confirm('确认删除${menu.mname}'))window.location.href='<%=path%>/delete/${menu.mid}'">
+					<input type = "button" value = "更新" onclick="window.location.href='<%=path%>/editMenu/${menu.mid}'">
 				</td>
 			</tr>
 		</c:forEach>

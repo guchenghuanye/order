@@ -5,6 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	CategoryManager categoryManager = (CategoryManager)session.getAttribute("categoryManager");
+	String path = request.getContextPath();
 %>
 
 <html>
@@ -18,7 +19,7 @@
 
 <body>
 	<h2>添加菜品</h2>
-	<form action="/saveMenu" method = "post">
+	<form action="<%=path%>/saveMenu" method = "post">
 		<table border="1" cellspacing="0" cellpadding="5">
 			<tr>
 				<th>菜品名称</th>
@@ -50,7 +51,7 @@
 		<br>
 		<input type = "submit" value = "添加"/>
 		&nbsp;
-		<input type = "button" value = "取消" onclick="window.location.href='/showMenus'"/>
+		<input type = "button" value = "取消" onclick="window.location.href='<%=path%>/showMenus'"/>
 	</form>
 
 </body>
