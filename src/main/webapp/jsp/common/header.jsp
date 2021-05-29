@@ -12,7 +12,7 @@
             <a class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    俺家的家常菜特别好吃
+                    俺家的家常菜真好吃
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
