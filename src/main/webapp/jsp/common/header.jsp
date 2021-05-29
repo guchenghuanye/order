@@ -3,6 +3,9 @@
 <script type="text/javascript">
     try{ace.settings.check('navbar' , 'fixed')}catch(e){}
 </script>
+<%
+    String base = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/";
+%>
 <div class="navbar navbar-default" id="navbar">
     <%--<script type="text/javascript">--%>
         <%--try{ace.settings.check('navbar' , 'fixed')}catch(e){}--%>
@@ -22,7 +25,7 @@
 
                 <li class="light-blue">
                     <a data-toggle="dropdown">
-                        <img class="nav-user-photo" src="<%=basePath%>/assets/avatars/user.jpg" alt="Jason's Photo" />
+                        <img class="nav-user-photo" src="<%=base%>/assets/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
                             <small>欢迎光临,</small>
                             小同学
